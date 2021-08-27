@@ -1,0 +1,99 @@
+:root{
+    --dark:#14171d;
+    --dark-x:#1d2027;
+}
+
+html, body{
+    
+    
+    background: var(--dark-x);
+    height: 100%;
+
+}
+.navbar-default{ /*barra de navegacion*/
+    background: #1c1c1c; /*colro de la barra de navegacion */
+    margin: auto; /*me spluciono el problema de que habi a un espacio muy grande en negro entre la barra de navegacion y el section es decir esto me los dejo pegados para que se viera bien */
+}
+.navbar-brand{ /*logo de la cabecera osea de la barra de navegacion */
+    background: url("/assets/rockstar.jpg");
+    background-repeat: no-repeat/*esto es para que la imagen de fondo no se repita */;
+    background-size: cover;/* en tamaño que cubra toda la imagen para que la imagen cubra todo el header es decir se muetre completa toda la imagen cabe destacar que cuando la pagina esta en tamaño normal no se muestra completa pero si reducimos el tamaño si  */
+   
+    background-position: center;/*movemos y pnemos la imagen como queremos en este caso con center centramos toda la imagen es decir la poneos centrada */
+    width: 100px; /*ancho de 150 px*/
+    
+    justify-content: center;
+    align-items: center;
+    margin-top: 7px;
+
+    
+}
+
+.navbar li a:link,.navbar li a:visited{ /* link de la barra de navegacion*/
+    color: #b6910a !important;
+}
+
+.navbar li a:hover,.navbar li a:active{ /*link de la barra de navegacion */
+    color: #e2c868 !important;
+}
+
+#hero-container{ /*este es el section*/
+    height: 600px; /*altura de 600px*/
+}
+
+#hero-background{ /*este es el primer div dentro del section*/
+    background:  linear-gradient(rgba(95,114,190, .8), rgba(155,35,234, .7)), url("/assets/Multijugador.jpg"); /* el linear-gradiente genera un degradado que es la combinacion de varios colores  IMPORTANTE*/
+    background-size: cover; /* hace que la imagen de fondo se adacte perfectamente a la pantalla sin importar el tamaño PS COMO DICE CUBRE LA PANTALLA,  SUPER IMPORTANTE */
+    background-position: center; /* hace que el contenido del background se centre IMPORTANTE */
+    color: #fff;
+    position: absolute; /*INVESTIGAR*/
+    width: 0; /*ANCHURA DE 0 , esto es porque queremos que la anchura este en 0 por defecto pero cuando carque la pagina el efecto que aremos con javascript le dara una anchura de 100%  y hace que alla una transicion muy bonito*/
+    height: 600px;
+    transition: 1s ease-in-out; /*INVESTIGAR EL EASE-IN-OUT*/
+    
+}
+
+
+#hero-text{
+    text-align: center; /*centra todos lso contenedos*/
+    margin-left: 300px;
+    
+
+}
+
+#hero-text h1{ /*es la primera colomna el h1*/
+    color: #b6910a; /*color de las letras del h1*/
+    font-size: 80px;
+    font-weight: bold; /*para que este en negritas*/
+    margin-bottom: 4px; /*margin por abajo de 4px*/
+    margin-top: 150px;
+    
+
+
+    
+}
+#hero-text p{ /*es la etiqueta p que esta dentro de la priemra columna*/
+    margin-bottom: 5px; /*le damos un margen de 5px ára separar los contenedores de h1 y p*/
+    
+    color: #e2c868;
+    font-size: 20px;
+    text-align: center;
+}
+
+#hero-img{ /*es la imagen 1 */
+    position: absolute; /**/
+    width: 100%;
+    max-width: 450px;
+     /*para que cuando entremos a la pagina no se vea */
+    z-index: 1000; /*esto har a que la imagen este encima de la otra */
+    transition: 2s ease-in-out; /*INVESTIGAR EL EASE-IN-OUT*/
+    background-image: none;
+    margin-top: 100px;
+}
+
+#lines{ /*imagen 2*/
+    position: absolute;
+    width: 50px;
+    
+}
+

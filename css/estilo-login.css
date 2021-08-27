@@ -1,0 +1,137 @@
+*{ /*esto afectara a todos los componentes dentro de la pagina*/
+    box-sizing: border-box; /*le estamoso dando un bordeados tipo caja esto es MUY IMPORTANTE YA SEA CUANDO VAYAMOS A USAR MARGGIN O PADDING*/
+    font-family: "Lato",sans-serif;/*tipo de letra que afectara toda la pagina */
+    color: #555; /*esto afectara a todos lso texto*/
+
+
+
+}
+
+body{
+    margin: 0;
+    height: 100vh; /*alto del 100% pero lo hacemos con vh INVESTIGAR VH*/
+    display: flex; /*para que podamos centrar todos los componentes , ahora en mi experiencia con el ecommer el display flex lo que hace es que un elemento lo acomoda uno al lado del otro para que se vea bien ordenado*/
+    justify-content: center; /*centra todo el el contenido  por defecto INVESTIGAR TIENE QUE VER CON EL DISPALY FLEX */
+    align-items: center; /*INVESTIGAR LA DIFERENCIA ENTRE JUSTIFIY Y ALING-ITEM Y SU RELACION CON DISPLAY-FLEX*/
+    background: #1c1c1c ; /*color de fonod*/
+
+}
+
+.login-div{
+    width: 330px;/*ancho de 330px*/
+    height: 600px; /*altura de 600 px*/
+   
+    /*aqui comiensa el estilo neoformismo*/
+    border-radius: 40px;
+    /*background: #1c1c1c; color base  que nos lo genera la pagina donde sacamos el codigo pero como ya tenemos ese color base en el body lo vamos a quitar*/
+    box-shadow: 10px 10px 20px #0e0101e8, -10px -10px 20px #0e010118;/*bordes del logo*/
+    /*aqui termina el neoformismo */
+    padding: 50px 35px 35px 35px;  /*paddin arriba de 50px  a la derecha 35px , abajo 35px y 35px a la izquierda*/
+    
+
+
+}
+
+
+.logo{
+    background: url("../assets/rockstar.jpg");
+    background-repeat: no-repeat/*esto es para que la imagen de fondo no se repita */;
+    background-size: cover;/* en tamaño que cubra toda la imagen para que la imagen cubra todo el header es decir se muetre completa toda la imagen cabe destacar que cuando la pagina esta en tamaño normal no se muestra completa pero si reducimos el tamaño si  */
+   
+    background-position: center;/*movemos y pnemos la imagen como queremos en este caso con center centramos toda la imagen es decir la poneos centrada */
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    margin: 0 auto; /*hace que la imafen quede en el centro*/
+    box-shadow: 0px 0px 2px #1a181863, 0px 0px 0px 5px #0f1113e0 ,
+    10px 10px 20px #1c1c1c, -10px -10px  20px #1c1c1c3f;
+}
+
+.titulo{
+    text-align: center; /*aliniea el texto en el centro*/
+    font-size: 28px; /*tamaño de la letra*/
+    font-weight:700; /*grosor de la letra*/
+    letter-spacing: 0.5px; /*esoacio entre las letras*/
+    padding: 5px;
+    color: #756824;
+    
+}
+
+.subtitulo{
+    text-align: center; /*alinea el texto en el centro*/
+    font-size: 15px;
+    margin-top: 5px;
+    letter-spacing:3px; /*espacio entre las letras*/
+    color: #54471d;
+}
+
+.campos{
+    margin-top: 55px;
+}
+
+.usuario,.contraseña{ /*son lso div de usuario y contraseña*/
+    margin-bottom: 30px ; /*separa los input para que no esten tan pegados*/
+    /*comienso del neomorphismo en los div de usuario y contraseña  con efecto undido*/
+    border-radius: 25px; 
+    background: #ecf0f3;
+    box-shadow: inset 10px 10px 20px #cbced1, inset -10px -10px 20px #ffffff; /*el inset eslo que hace que las sonbras se vean hacia adentro osea internamente eso causa el efecto undido de profundida asi como se uhuera un hueco*/
+    /*final del neumorhismo del los div usuario y contraseña con efecto undido que es gracias al inset*/
+
+}
+
+input{ /*afectamos a los input directamente*/
+    border: none; /*les quitamos los bordes que traen por defecto todos los input*/
+    outline: none; /* le quita una linea azul segun el profesor INVESTIGAR POR LO QUE VI LE QUITA SON UNAS LINEAS QUE APARECEN ALREDERDOR DEL INPUT CUANDO LO PULZAS PARA ESCRIBIR*/
+    background: none; /*LE QUITA EL COLOR GRIS POR DEFECTO QUE TRAE LOS INPUT */
+    font-size: 14px; /*AUMENTAEL TAMAÑO DEL PLACEHOLDER DE LOS INPUT ES DECIR DE LAS LETRAS DE LO QUE ESTRE ESCRITO AHI */
+    margin: 20px; /*margen de 20px para separar los contenedores nombre y contraseña de cada input esto ara que los input se vean mas GRANDES YA QUE ESTAMOS SEPARANDO O ALEJANDO POR EJEMPLO EL DIV USUARIO DE LA ETIQUETA  INPUT QUE ESTA DENTRO DE EL Y PRO ESO SE HACE MAS GRANDE  */
+
+}
+
+/*USE BOSOTRAP PARA LOS ICONOS por eso la etiqueta i */
+i{ /*conos de boostrap*/
+    font-size: 20px; /* el profesorr utiliza height para afectar el tamaño de los iconos pero esta equivocado porque al usar height estamos afectando el tamaño del contenedor de los iconos osea del i por heso los imput se ahcen ams grandes para afectar directamente el tamaño de los iconos tenemos que usar font-size ya que los iconos son tomados como texto osea letras y font-size afecta el tamaño de la letra  asi afectamos su altura  y por defecto su ancho*/
+    margin: 2px 15px -5px; /*le ponemos marfenes para que los contenedores de el i y los de usruario y contraseña esten ams sepaarados*/
+    color: #999; /*color de los iconos */
+    
+}
+
+.boton{
+    outline:none; /**/
+    border: none;
+    cursor: pointer; /*ahce qeu cuando apuntemos tengamos una manito*/
+    width: 100%; /*anchura del 100% del tamaño del contenedor del boton osea de la etiqueta button esto curiosamente como agranda el botton deja el texto que alla dentro del boton en el centro */
+    height:50px; /*altura de lboton*/
+    font-size: 20px; /*tamaño de letra dentro del boton*/
+    font-weight: 700; /*grosor de las letras dentro del boton*/
+    color: #fff; /*color de las letras dentro del boton*/
+    /*comienso del neoformismo del boton*/
+    background: #b19a4a; /*color de fondo del boton*/
+    border-radius: 25px;
+    
+    box-shadow: 5px 5px 10px #b6910a,-5px -5px 10px #e2c868;
+    
+
+
+    /*final del neoformismo del boton*/
+    transition:0.5s ; /*hace que los efectos de hover y active del boton sean mas lentos y se vean mejor con un 0,5 segundos*/
+
+}
+
+.boton:hover{ /*para que cuando se pase el raton por enxima el boton cambia a ese boton*/
+    background: #2fdbb6;
+}
+.boton:active{ /*para cuando el boton sea cliqueado*/
+    background: #1da88a; /*cuando lo cliquean pone ese color*/
+}
+
+.link{
+    padding-top: 20px;
+    text-align: center; /*centra todos los textos*/
+}
+.link a { /*son los link de olvidaste la contraseña o de login  pero lo que tenga la etiqueta a */
+    text-decoration: none; /*quita las rayas azules que traen los link por defecto */
+    color: #a7aaaf; /*color de texto de los link*/
+    font-size: 15px;
+
+}
